@@ -207,7 +207,7 @@ class BigramLanguageModel(nn.Module):
 
 model = BigramLanguageModel()
 m = model.to(device)
-new_mod = torch.load('test_sav')
+new_mod = torch.load('test_sav', map_location=device)
 
 
 print('---- ShakespeareGPT ----')
